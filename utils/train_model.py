@@ -20,7 +20,7 @@ train = pd.read_csv('data/train_data.csv')
 train = train[(train['Commodities'] == 'APPLE GOLDEN DELICIOUS')]
 
 y_train = train['avg_price_per_kg']
-X_train = train[['Total_Qty_Sold','Stock_On_Hand']]
+X_train = train[['Weight_Kg', 'Low_Price', 'High_Price', 'Sales_Total', 'Total_Qty_Sold', 'Total_Kg_Sold']]
 
 # Fit model
 lm_regression = LinearRegression(normalize=True)
